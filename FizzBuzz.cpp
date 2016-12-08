@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <sstream>
+
 using namespace std;
 vector<string> fizzBuzz(int n) {
     vector<string> str;
@@ -11,8 +13,15 @@ vector<string> fizzBuzz(int n) {
                 str.push_back("Fizz");
             else if(i%5==0)
                 str.push_back("Buzz");
-            else
-                str.push_back(to_string(i));
+            else {
+                //c++ 11 新增函数to_string(i)
+                //str.push_back(to_string(i));
+
+                //或借助字符串流，要 include <sstream>
+                stringstream ss;
+                ss<<i;
+                str.push_back(ss.str());
+            }
         }
     return str;
 }
