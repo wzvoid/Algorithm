@@ -3,5 +3,5 @@ project(Algorithm)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES FizzBuzz.cpp)
+set(SOURCE_FILES ReverseString.cpp ReverseString.cpp)
 add_executable(Algorithm ${SOURCE_FILES})
