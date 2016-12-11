@@ -42,7 +42,7 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
     int flag=0;//进位数
     int v1,v2;
     ListNode *l3=NULL;//构造最终链表并返回
-    ListNode *p1,*p2,*p3;//遍历各个链表
+    ListNode *p1=NULL,*p2=NULL,*p3=NULL;//遍历各个链表
     if(l1!=NULL&&l2!=NULL){
         p1=l1;
         p2=l2;
@@ -76,7 +76,7 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
 
 
 ListNode* createListNode(int a[],int n){
-    ListNode *head=NULL,*p;
+    ListNode *head=NULL,*p=NULL;
     for (int i = 0; i < n; ++i) {
         ListNode *temp=(ListNode*)malloc(sizeof(ListNode));
         temp->val=a[i];
