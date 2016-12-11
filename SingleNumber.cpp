@@ -35,7 +35,7 @@ int singleNumber(vector<int>& nums) {
             return nums[i];
     return nums[size-1];*/
 
-    //第三种：使用异或"XOR" 如：(2^1^4^5^2^4^1) => ((2^2)^(1^1)^(4^4)^(5)) => (0^0^0^5) => 5。Accepted
+    //第三种：使用异或 如：(2^1^4^5^2^4^1) => ((2^2)^(1^1)^(4^4)^(5)) => (0^0^0^5) => 5。Accepted
     int single = 0;
     for (int i = 0; i<size; ++i)
         single ^=nums[i];
