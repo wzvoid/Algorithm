@@ -36,7 +36,12 @@ int maxDepth(TreeNode* root) {
     if(root==NULL){
         return 0;
     }else{
-        return (maxDepth(root->left) > maxDepth(root->right) ? maxDepth(root->left) : maxDepth(root->right)) + 1;
+        int left = maxDepth(root->left);
+        int right = maxDepth(root->right);
+        //好吧 这里有个小失误，return的时候不要写成：
+        //return (maxDepth(root->left)>maxDepth(root->right)?maxDepth(root->left):maxDepth(root->right))+1
+        //否则会出现：Time Limit Exceeded，原因就不用说了，谨记！
+        return (left>right?left:right) + 1;
     }
 }
 int main() {
