@@ -3,5 +3,5 @@ project(Algorithm)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES AddTwoNumbers.cpp)
+set(SOURCE_FILES MaximumDepthofBinaryTree.cpp)
 add_executable(Algorithm ${SOURCE_FILES})

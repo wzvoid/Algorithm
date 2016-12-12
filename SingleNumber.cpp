@@ -10,7 +10,7 @@ using namespace std;
 
 int singleNumber(vector<int>& nums) {
     auto size = nums.size();
-    //第一种：最简单的方法，向后遍历然后交换,但是timeout
+    //第一种：最简单的方法，向后遍历然后交换,但是 Time Limit Exceeded
     /*int temp,flag;
     for (int i = 0; i < size; i += 2) {
         flag = 0;
