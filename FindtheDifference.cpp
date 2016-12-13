@@ -72,6 +72,5 @@ int main() {
     string s("abcd");
     string t("bcdae");
     cout<<findTheDifference(s,t);
-
     return 0;
 }
