@@ -12,40 +12,40 @@ using namespace std;
 // t="aa"
 // s="a"
 
-char findTheDifference(string s, string t) {
-    string::size_type ssize = s.size(),tsize = ssize +1;
-    int i;
-    for (i = 0; i < tsize; ++i) {
-        if(string::npos == s.find(t[i]))
-            break;
-    }
-    if(i>=tsize)
-        return t[tsize-1];
-    else
-        return t[i];
-}
-
-// 击败1.07%
 //char findTheDifference(string s, string t) {
 //    string::size_type ssize = s.size(),tsize = ssize +1;
-//    int i,j;
-//    bool flag;
-//    for ( i = 0; i < tsize; ++i) {
-//        flag= false;
-//        for ( j = 0; j < ssize; ++j) {
-//            if(s[j]==' ')
-//                continue;
-//            if(s[j]==t[i]){
-//                s[j]=' ';
-//                flag=true;
-//                break;
-//            }
-//        }
-//        if(!flag){
-//            return t[i];
-//        }
+//    int i;
+//    for (i = 0; i < tsize; ++i) {
+//        if(string::npos == s.find(t[i]))
+//            break;
 //    }
+//    if(i>=tsize)
+//        return t[tsize-1];
+//    else
+//        return t[i];
 //}
+
+// 击败1.07%
+char findTheDifference(string s, string t) {
+    string::size_type ssize = s.size(),tsize = ssize +1;
+    int i,j;
+    bool flag;
+    for ( i = 0; i < tsize; ++i) {
+        flag= false;
+        for ( j = 0; j < ssize; ++j) {
+            if(s[j]==' ')
+                continue;
+            if(s[j]==t[i]){
+                s[j]=' ';
+                flag=true;
+                break;
+            }
+        }
+        if(!flag){
+            return t[i];
+        }
+    }
+}
 
 // 击败0.96%
 //char findTheDifference(string s, string t) {
