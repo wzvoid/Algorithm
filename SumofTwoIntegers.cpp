@@ -9,11 +9,15 @@
 
 using namespace std;
 
+//3.93%
 int getSum(int a, int b) {
-    return a^b + (a&b)<<1;
+    if (b == 0) return a;
+    int sum = a ^ b;
+    int carry = (a & b) << 1;
+    return getSum(sum, carry);
 }
 
 int main() {
-    cout<<getSum(1,2);
+    cout<<getSum(30,20);
     return 0;
 }
