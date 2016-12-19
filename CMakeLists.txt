@@ -3,5 +3,5 @@ project(Algorithm)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES bitset.cpp)
+set(SOURCE_FILES FizzBuzz.cpp)
 add_executable(Algorithm ${SOURCE_FILES})
