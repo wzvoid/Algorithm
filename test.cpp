@@ -1,13 +1,13 @@
 #include <iostream>
 #include <vector>
+#include <cstring>
 using namespace std;
-typedef string::size_type SIZE;
-//using SIZE = string::size_type;
 
 int main(int argc, char *argv[]) {
-    string a("hello world!!!");
-    for(auto &c:a)
-        c=toupper(c);
-    cout<<a<<endl;
+    int a[3][4][5]={0};
+    for(auto &rows:a)
+        for (auto &cols:rows)
+            for(auto ss:cols)
+                cout << ss<< " ";
     return 0;
 }
