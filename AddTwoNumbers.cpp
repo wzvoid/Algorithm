@@ -1,7 +1,3 @@
-//
-// Created by wzvoid on 2016/12/11.
-//
-
 #include <iostream>
 #include <vector>
 #include <string>
@@ -15,34 +11,39 @@ struct ListNode {
 };
 
 /*
- * 几个典型的测试用例：
+ * Several typical test cases:
  * 3-4-6
  * 5-7-1
+ * +
  * ----------
  * 8-1-8
  *
  * 3-4-6
  * 5-7-3
+ * +
  * ----------
  * 8-1-0-1
  *
  * 3-4-6
  * 5-7-6-1
+ * +
  * ----------
  * 8-1-3-2
  *
  * 3-4-6
  * 5-7-6-9
+ * +
  * ----------
  * 8-1-3-0-1
  *
- * */
+ *
+ */
 
 ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-    int flag=0;//进位数
+    int flag=0; //carry
     int v1,v2;
-    ListNode *l3=NULL;//构造最终链表并返回
-    ListNode *p1=NULL,*p2=NULL,*p3=NULL;//遍历各个链表
+    ListNode *l3=NULL; //construct final list and return
+    ListNode *p1=NULL,*p2=NULL,*p3=NULL; //traverse every list
     if(l1!=NULL&&l2!=NULL){
         p1=l1;
         p2=l2;
@@ -52,7 +53,7 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
             ListNode *temp=(ListNode*)malloc(sizeof(ListNode));
             temp->val=(v1+v2+flag)%10;
             temp->next=NULL;
-            flag=(v1+v2+flag)/10;//求进位
+            flag=(v1+v2+flag)/10;//carry
             if(l3==NULL){
                 p3=l3=temp;
             } else{

@@ -1,7 +1,3 @@
-//
-// Created by wzvoid on 2016/12/18.
-//
-
 #include <iostream>
 #include <string>
 #include <bitset>

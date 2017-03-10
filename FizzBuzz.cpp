@@ -14,10 +14,10 @@ vector<string> fizzBuzz(int n) {
             else if(i%5==0)
                 str.push_back("Buzz");
             else {
-                //c++ 11 新增函数to_string(i)
+                //c++ 11 the new function:to_string(i)
                 //str.push_back(to_string(i));
 
-                //或借助字符串流，要 include <sstream>
+                //or with the help of sstream, include <sstream>
                 stringstream ss;
                 ss<<i;
                 str.push_back(ss.str());

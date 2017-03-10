@@ -1,7 +1,3 @@
-//
-// Created by wzvoid on 2016/12/12.
-//
-
 #include <iostream>
 #include <vector>
 #include <string>
@@ -25,7 +21,7 @@ using namespace std;
 //        return t[i];
 //}
 
-// 击败1.07%
+// beat 1.07%
 char findTheDifference(string s, string t) {
     string::size_type ssize = s.size(),tsize = ssize +1;
     int i,j;
@@ -47,7 +43,7 @@ char findTheDifference(string s, string t) {
     }
 }
 
-// 击败0.96%
+// beat 0.96%
 //char findTheDifference(string s, string t) {
 //    string::size_type ssize = s.size(),tsize = ssize +1;
 //    int k;
