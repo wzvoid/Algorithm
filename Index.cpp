@@ -3,7 +3,7 @@
 #include <cstring>
 using namespace std;
 int main(int argc, char *argv[]) {
-    int i[]={0,3,4,5,7};
-    cout<<(sizeof(i)/ sizeof(*i));
+    for(int i=0;i!=argc;++i)
+        cout<<argv[i]<<endl;
     return 0;
 }
