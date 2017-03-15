@@ -30,6 +30,7 @@ struct ListNode {
 //    }
 //    return NULL;
 //}
+
 ListNode* reverseList(ListNode* head) {
     if(head->next){
         ListNode *temp;
@@ -40,6 +41,7 @@ ListNode* reverseList(ListNode* head) {
         return head;
     }
 }
+
 ListNode* createList(){
     ListNode* head=NULL,*p=head;
     for(int i=0;i<10;++i){
