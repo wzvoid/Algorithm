@@ -1,18 +1,13 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <cassert>
 using namespace std;
 int main(int argc, char *argv[]) {
-    vector<int> v;
-    for(int i=1;i!=11;++i) {
-        v.push_back(i);
-    }
-    for(const auto c:v)
-        cout<<c<<" ";
-    v.resize(5);
-    cout<<endl;
-    for(const auto c:v)
-        cout<<c<<" ";
-    cout<<v.size()<<" "<<v.capacity();
+    vector<int> v(10,1);
+    assert(v.size()>10);
+#ifndef NDEBUG
+    cerr<<__FILE__<<" "<<__FUNCTION__<<" ";
+#endif
     return 0;
 }
