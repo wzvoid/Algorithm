@@ -10,7 +10,7 @@ struct ListNode {
     ListNode *next;
     ListNode(int x) : val(x), next(NULL) {}
 };
-
+//链表头插法
 //ListNode* reverseList(ListNode* head) {
 //    if(head){
 //        ListNode *reverse_list = NULL;
@@ -31,15 +31,9 @@ struct ListNode {
 //    return NULL;
 //}
 
+//迭代法
 ListNode* reverseList(ListNode* head) {
-    if(head->next){
-        ListNode *temp;
-        temp=head->next;
-        head->next=NULL;
-        reverseList(temp)->next=head;
-    }else{
-        return head;
-    }
+
 }
 
 ListNode* createList(){
