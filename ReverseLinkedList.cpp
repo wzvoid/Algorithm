@@ -10,7 +10,7 @@ struct ListNode {
     ListNode *next;
     ListNode(int x) : val(x), next(NULL) {}
 };
-//链表头插法
+//头插法
 //ListNode* reverseList(ListNode* head) {
 //    if(head){
 //        ListNode *reverse_list = NULL;
@@ -32,13 +32,32 @@ struct ListNode {
 //}
 
 //迭代法
+//ListNode* reverseList(ListNode* head) {
+//    if(head){
+//        ListNode *current,*next,*prior;
+//        prior=NULL;
+//        current=head;
+//        next=head->next;
+//        while(current){
+//            current->next=prior;
+//            prior=current;
+//            current=next;
+//            if(next)
+//                next=next->next;
+//        }
+//        return prior;
+//    }
+//    return NULL;
+//}
+
+//递归法
 ListNode* reverseList(ListNode* head) {
 
 }
 
 ListNode* createList(){
     ListNode* head=NULL,*p=head;
-    for(int i=0;i<10;++i){
+    for(int i=1;i<=1;++i){
 //        ListNode *temp=(ListNode *)malloc(sizeof(ListNode));
 //        temp->val=i;
 //        temp->next=NULL;

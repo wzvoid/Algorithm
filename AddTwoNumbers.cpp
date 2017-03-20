@@ -50,6 +50,7 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
         while(p1!=NULL||p2!=NULL){
             v1=p1==NULL?0:p1->val;
             v2=p2==NULL?0:p2->val;
+            //ListNode *temp=new ListNode((v1+v2+flag)%10);
             ListNode *temp=(ListNode*)malloc(sizeof(ListNode));
             temp->val=(v1+v2+flag)%10;
             temp->next=NULL;
