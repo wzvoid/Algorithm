@@ -2,9 +2,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
-
 using namespace std;
-
 struct ListNode {
     int val;
     ListNode *next;
@@ -30,7 +28,6 @@ struct ListNode {
 //    }
 //    return NULL;
 //}
-
 //迭代法
 //ListNode* reverseList(ListNode* head) {
 //    if(head){
@@ -49,18 +46,16 @@ struct ListNode {
 //    }
 //    return NULL;
 //}
-
 //递归法
 ListNode* reverseList(ListNode* head) {
 
 }
-
 ListNode* createList(){
     ListNode* head=NULL,*p=head;
-    for(int i=1;i<=1;++i){
-//        ListNode *temp=(ListNode *)malloc(sizeof(ListNode));
-//        temp->val=i;
-//        temp->next=NULL;
+    for(int i=1;i<=10;++i){
+        //ListNode *temp=(ListNode *)malloc(sizeof(ListNode));
+        //temp->val=i;
+        //temp->next=NULL;
         ListNode *temp = new ListNode(i);
         if(!head){
             head=p=temp;
