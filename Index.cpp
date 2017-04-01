@@ -1,33 +1,60 @@
 #include <iostream>
-#include <vector>
-#include <string>
-#include <cassert>
-
 using namespace std;
 
-void f();
-void f(int a);
-void f(const int a);
-void f(int a,int b);
-void f(double a, double b);
+void hano(int n,int p1,int p2,int p3);
+inline void swap(int &a,int &b);
+bool isSwap(int a[], int start, int end);
+void permutation(int arry[],int start, int end);
 
-int main(int argc, char *argv[]) {
-    f(3.3,5.7);
+int main() {
+    int arry[] = {1, 2, 3};
+    permutation(arry, 0, 2);
     return 0;
 }
 
-void f(){
-    cout<<"f()";
+void hano(int n,int p1,int p2,int p3) {
+    static int count = 0;
+    if (n==1) {
+        ++count;
+        cout<< count << "：从 " << p1 << " -> " << p3 << endl;
+    } else {
+        hano(n-1,p1,p3,p2);
+        ++count;
+        cout<<count<<"：从 "<<p1<<" -> "<<p3<<endl;
+        hano(n-1,p2,p1,p3);
+    }
 }
-void f(int a){
-    cout<<"f(int a)";
+
+inline void swap(int &a, int &b) {
+    int temp = a;
+    a = b;
+    b = temp;
 }
-void f(const int a){
-    cout<<"f(const int a)";
+
+bool isSwap(int arry[], int start, int end) {
+    for (int i = start; i <= end; ++i) {
+        if(arry[i] == arry[end])
+            return false;
+    }
+    return true;
 }
-void f(int a,int b){
-    cout<<"f(int a,int b)";
-}
-void f(double a, double b){
-    cout<<"f(double a,double b)";
+
+void permutation(int arry[],int start, int end) {
+    static int count1 = 0;
+    if (start == end) {
+        ++count1;
+        cout << count1 << ":";
+        for (int i = 0; i <= end; ++i) {
+            cout << arry[i];
+        }
+        cout << endl;
+    } else {
+        for (int i = start; i <= end; ++i) {
+            if (true) {
+                swap(arry[start], arry[i]);
+                permutation(arry, start + 1, end);
+                swap(arry[start], arry[i]);
+            }
+        }
+    }
 }
