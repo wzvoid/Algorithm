@@ -3,5 +3,5 @@ project(Algorithm)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES HammingDistance.cpp Permutations.cpp)
+set(SOURCE_FILES "Two Sum/main.cpp")
 add_executable(Algorithm ${SOURCE_FILES})
