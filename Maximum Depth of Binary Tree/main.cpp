@@ -44,7 +44,7 @@ public:
     //前序遍历
     void print(TreeNode *root) {
         if (root != NULL) {
-            cout << root->val << endl;
+            cout << root->val << " ";
             print(root->left);
             print(root->right);
         }
