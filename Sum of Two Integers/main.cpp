@@ -27,6 +27,6 @@ public:
 
 int main() {
     Solution s;
-    cout << s.getSum(30,20);
+    cout << s.getSum(30, 20);
     return 0;
 }

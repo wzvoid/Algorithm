@@ -9,7 +9,7 @@ using namespace std;
 class Solution {
 public:
     string reverseString(string s) {
-        int end = s.size(),i = 0,j = end-1;
+        int end = s.size(), i = 0, j = end - 1;
         char c;
         while (i <= j) {
             c = s[i];

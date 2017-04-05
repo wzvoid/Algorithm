@@ -28,21 +28,21 @@ public:
 
     // beat 1.07%
     char findTheDifference(string s, string t) {
-        string::size_type ssize = s.size(),tsize = ssize +1;
-        int i,j;
+        string::size_type ssize = s.size(), tsize = ssize + 1;
+        int i, j;
         bool flag;
-        for ( i = 0; i < tsize; ++i) {
-            flag= false;
-            for ( j = 0; j < ssize; ++j) {
-                if(s[j]==' ')
+        for (i = 0; i < tsize; ++i) {
+            flag = false;
+            for (j = 0; j < ssize; ++j) {
+                if (s[j] == ' ')
                     continue;
-                if(s[j]==t[i]){
-                    s[j]=' ';
-                    flag=true;
+                if (s[j] == t[i]) {
+                    s[j] = ' ';
+                    flag = true;
                     break;
                 }
             }
-            if(!flag){
+            if (!flag) {
                 return t[i];
             }
         }
@@ -74,6 +74,6 @@ int main() {
     Solution so;
     string s("abcd");
     string t("bcdae");
-    cout << so.findTheDifference(s,t);
+    cout << so.findTheDifference(s, t);
     return 0;
 }

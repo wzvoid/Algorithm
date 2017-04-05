@@ -31,7 +31,7 @@ public:
         }
     }
 
-    vector<vector<int>> permute(vector<int>& nums) {
+    vector<vector<int>> permute(vector<int> &nums) {
         vector<vector<int>> permut;
         permutation(permut, nums, 0, nums.size() - 1);
         return permut;

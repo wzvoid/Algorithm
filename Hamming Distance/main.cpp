@@ -9,12 +9,12 @@ using namespace std;
 class Solution {
 public:
     int hammingDistance(int x, int y) {
-        int c = x ^ y;
+        int c = x ^y;
         int count = 0;
         while (c != 0) {
-            if(c % 2 == 1)
+            if (c % 2 == 1)
                 ++count;
-            c = c/2;
+            c = c / 2;
         }
         return count;
     }
@@ -22,6 +22,6 @@ public:
 
 int main() {
     Solution s;
-    cout << s.hammingDistance(5,3);
+    cout << s.hammingDistance(5, 3);
     return 0;
 }

@@ -11,7 +11,7 @@ using namespace std;
 
 class Solution {
 public:
-    int singleNumber(vector<int>& nums) {
+    int singleNumber(vector<int> &nums) {
         auto size = nums.size();
         //第一种：最简单的方法，向后遍历然后交换,但是 Time Limit Exceeded
         /*int temp,flag;
@@ -40,15 +40,15 @@ public:
 
         //第三种：使用异或 如：(2^1^4^5^2^4^1) => ((2^2)^(1^1)^(4^4)^(5)) => (0^0^0^5) => 5。Accepted
         int single = 0;
-        for (int i = 0; i<size; ++i)
-            single ^=nums[i];
+        for (int i = 0; i < size; ++i)
+            single ^= nums[i];
         return single;
     }
 };
 
 int main() {
     Solution s;
-    vector<int> v{4,4,5,5,6,6,7};
+    vector<int> v{4, 4, 5, 5, 6, 6, 7};
     cout << s.singleNumber(v);
     return 0;
 }
