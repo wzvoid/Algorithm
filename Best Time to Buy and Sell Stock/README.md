@@ -18,17 +18,17 @@ In this case, no transaction is done, i.e. max profit = 0.
 
 最蠢的方法就是遍历，我能想得到的也就这种了...
 
-看了solution，才知道有一个经典的算法：`kadane算法`。即最大字数列问题。
+看了solution，才知道有一个经典的算法：`kadane算法`。即最大子数列问题。
 具体思想是：遍历数组，在遍历的过程中，依次累加每个元素，结果记为max_ending_here，如果max_ending_here小于0，则将max_ending_here重置为0。然后定义变量max_sofar，记录曾经最大的max_ending_here。
 当遍历结束时，max_sofar就是最大字数列的所有元素的累加和。
 ```
 public int maxProfit(int[] prices) {
-    int maxCur = 0, maxSoFar = 0;
+    int max_ending_here = 0, max_sofar = 0;
     for(int i = 1; i < prices.length; i++) {
-        maxCur = Math.max(0, maxCur += prices[i] - prices[i-1]);
-        maxSoFar = Math.max(maxCur, maxSoFar);
+        max_ending_here = Math.max(0, max_ending_here += prices[i] - prices[i-1]);
+        max_sofar = Math.max(max_ending_here, max_sofar);
     }
-    return maxSoFar;
+    return max_sofar;
 }
 ```
 最大子数列问题中，有几个需要注意的地方：
