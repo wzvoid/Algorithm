@@ -10,6 +10,8 @@ struct TreeNode {
     int val;
     TreeNode *left;
     TreeNode *right;
+
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
 class Solution {
@@ -32,10 +34,7 @@ public:
         if (val == 0) {
             root = NULL;
         } else {
-            root = (TreeNode *) malloc(sizeof(TreeNode));
-            root->val = val;
-            root->left = NULL;
-            root->right = NULL;
+            root = new TreeNode(val);
             createBinaryTree(root->left);
             createBinaryTree(root->right);
         }
