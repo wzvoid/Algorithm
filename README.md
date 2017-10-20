@@ -1,1 +1,1 @@
-# Leetcode Algorithms (C++)
+# Leetcode Algorithms (CPP)
