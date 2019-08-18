@@ -3,5 +3,5 @@ project(Algorithm)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES Index.cpp)
+set(SOURCE_FILES AddTwoNumbers/main.cpp)
 add_executable(Algorithm ${SOURCE_FILES})
